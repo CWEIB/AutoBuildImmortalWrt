@@ -59,6 +59,13 @@ PACKAGES="$PACKAGES openssh-sftp-server"
 # 文件管理器
 PACKAGES="$PACKAGES luci-i18n-filemanager-zh-cn"
 
+# === 新增：添加 5G 模组支持包 ===
+# 基础内核驱动 (ImageBuilder 会自动从官方源拉取)
+PACKAGES="$PACKAGES kmod-usb-serial-option kmod-usb-net-cdc-mbim kmod-usb-net-qmi-wwan usb-modeswitch"
+
+# Siriling 仓库中的核心插件 (确保这些 ipk 存在于 packages 目录中)
+PACKAGES="$PACKAGES luci-app-modem luci-app-sms-tool quectel_cm_5G"
+# =============================
 
 # 第三方软件包 合并
 # ======== shell/custom-packages.sh =======
